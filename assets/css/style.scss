@@ -1,0 +1,62 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "./bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here
+
+* {
+  border: 1px solid black;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-sm-image {
+  position: relative;
+  height: 306px;
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+}
+
+.navbar-brand {
+  font-weight: 800;
+}
+
+.is-fixed {
+  position: fixed;
+  top: -83px;
+  transition: transform 0.2s;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.is-visible{
+transform: translate3d(0, 100%, 0)
+}
+
+
+
+@include media-breakpoint-up(md) {
+  .navbar {
+    background-color: transparent;
+  }
+
+  .header-sm-image {
+    height: 532px;
+    background-size: cover;
+
+  }
+
+}
