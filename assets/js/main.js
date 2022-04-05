@@ -1,24 +1,28 @@
 
-const navbar = document.querySelector(".navbar");
-const header = document.querySelector(".header-image-sm");
+const navbar = document.getElementById('navbarTop');
 
-console.log(navbar.clientHeight)
+console.log(navbar.clientHeight);
+let previousPosition = 0;
 
 window.onscroll = function (e) {
 
-  if (this.scrollY > "66") {
-    navbar.classList.add("is-fixed");
-    if (this.oldScroll > this.scrollY) {
-      navbar.classList.add("is-visible");
+  if (this.scrollY < previousPosition)
+  {
+    //scroll up
+    navbar.classList.add("show")
+    if(this.scrollY == 0)
+    {
+      navbar.classList.remove("fixed","show")
     }
-    else {
-      navbar.classList.remove("is-visible");
-    }
-    this.oldScroll = this.scrollY;
+
+
   }
-  else {
-    navbar.classList.remove("is-fixed");
-    navbar.classList.remove("is-visible");
+
+  else{
+    navbar.classList.remove("show")
+    if(this.scrollY > navbar.clientHeight)
+    navbar.classList.add("fixed")
   }
+  previousPosition = this.scrollY;
 
 }

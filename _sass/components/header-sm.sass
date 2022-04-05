@@ -1,0 +1,33 @@
+.header-sm-image
+  position: relative
+  background-size: contain
+  height: 306px
+  background-position: 50%
+  background-size: 100%
+  background-repeat: no-repeat
+  color: white
+  h1
+    font-size: 3rem
+    font-weight: 800
+  h3
+    font-size: 1.5rem
+    font-weight: 300
+
+  &::before
+    content: ""
+    height: 100%
+    width: 100%
+    background-color: black
+    opacity: 0.5
+    position: absolute
+
+
+@include media-breakpoint-up(lg)
+
+  .header-sm-image
+    height: 532px
+    background-size: cover
+    h1
+      font-size: 5rem
+
+

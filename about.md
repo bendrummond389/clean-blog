@@ -5,3 +5,5 @@ permalink: /about/
 ---
 
 {% include header-sm.html %}
+
+{{content}}

@@ -1,0 +1,37 @@
+.navbar
+  width: 100%
+  height: 83px
+  z-index: 1
+  position: relative
+  font-weight: 800
+  background-color: white
+  .navbar-brand
+    color: black
+  .nav-item
+    .nav-link
+      color: black
+
+@include media-breakpoint-up(lg)
+  .navbar
+    position: absolute
+    background: transparent
+    transition: background-color 0.2s
+    .navbar-brand
+      color: white
+    .nav-item
+      .nav-link
+        color: white
+
+  .show
+    transform: translate3d(0, 100%, 0)
+
+  .fixed
+    position: fixed
+    top: -83px
+    transition: transform 0.5s
+    background-color: rgba(255, 255, 255, 0.9)
+    .navbar-brand
+      color: black
+    .nav-item
+      .nav-link
+        color: black
