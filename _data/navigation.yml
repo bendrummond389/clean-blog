@@ -2,5 +2,7 @@
   link: /
 - name: About
   link: /about/
+- name: Sample Post
+  link: /Post.html
 - name: Contact
   link: /Contact/

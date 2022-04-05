@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light" id="navbarTop">
-  <div class="container mx-4 mx-lg-5">
-    <a class="navbar-brand" href="/">Start Bootstrap</a>
+  <div class="container-fluid px-4 px-lg-5 ">
+    <a class="navbar-brand ml-5" href="/">Start Bootstrap</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse px-4 px-lg-5" id="navbarTogglerDemo01">
 
 
-      <ul class="navbar-nav ml-auto py-4 py-lg-0">
+      <ul class="navbar-nav ml-auto">
 
         {% for item in site.data.navigation %}
-        <li class="nav-item">
+        <li class="nav-item px-2">
           <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>
         </li>
         {% endfor %}

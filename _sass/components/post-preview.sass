@@ -1,0 +1,32 @@
+.post-preview
+  h2
+    color: black
+    font-size: 1.875rem
+    font-weight: 800
+    &:hover
+    color: #0085A1
+  h3
+    color: black
+    font-size: calc(1.3rem + 0.6vw);
+    font-weight: 300
+    &:hover
+      color: #0085A1
+  p
+    color: darkgrey
+
+@include media-breakpoint-up(lg)
+  .post-preview
+    h2
+      color: black
+      font-size: 2.25rem
+      font-weight: 800
+      &:hover
+        color: #0085A1
+    h3
+      color: black
+      font-weight: 300
+      &:hover
+        color: #0085A1
+        
+    p
+      color: darkgrey
